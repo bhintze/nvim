@@ -1,3 +1,9 @@
+function InsertDateTime()
+    local date_time = "### " .. os.date("%Y-%m-%d %H:%M:%S") .. "\n\n"
+    vim.api.nvim_buf_set_lines(0, -1, -1, false, vim.split(date_time, "\n"))
+end
+
+vim.api.nvim_set_keymap('n', '<leader>dt', ':lua InsertDateTime()<CR>', { noremap = true, silent = true })
 vim.keymap.set('n', '<leader>vs', ':vs<CR>', { desc = 'Open vertical split' })
 vim.keymap.set('n', '<leader>hs', ':sp<CR>', { desc = 'Open horizontal split' })
 vim.keymap.set('n', '<leader>s', ':w<CR>', { desc = 'Write file' })

@@ -16,6 +16,14 @@ opt.autoindent = true -- copy indent from current line when starting new one
 
 opt.wrap = false
 
+-- Enable wrap for markdown and text files
+vim.cmd([[
+  autocmd FileType markdown,text setlocal wrap
+]])
+
+-- no margin
+vim.o.numberwidth = 1
+
 -- search settings
 opt.ignorecase = true -- ignore case when searching
 opt.smartcase = true -- if you include mixed case in your search, assumes you want case-sensitive
