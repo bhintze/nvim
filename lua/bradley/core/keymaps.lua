@@ -25,3 +25,4 @@ vim.keymap.set('n', '<CR>', ':nohlsearch<CR>', { desc = 'Find word below cursor'
 vim.keymap.set('n', "+", "<C-a>", { desc = "Increment numbers" })
 vim.keymap.set('n', "-", "<C-x>", { desc = "Decrement numbers" })
 vim.keymap.set('n', "<leader>n", ":set relativenumber!<CR>", { desc = "Set Relative Number" })
+vim.keymap.set('n', '<leader>b', ':BufferPick<CR>', { desc = 'BufferPick for Barbar' })
