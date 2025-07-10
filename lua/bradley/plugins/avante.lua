@@ -7,7 +7,8 @@ return {
     provider = "azure",
     azure = {
       endpoint = "https://llmexperiments.openai.azure.com",
-      deployment = "mike-gpt-4o",
+      deployment = "gpt-4.1",
+      disable_tools = true,
       temperature = 0.1,
       timeout = 30000,
       api_version = "2023-05-15",
