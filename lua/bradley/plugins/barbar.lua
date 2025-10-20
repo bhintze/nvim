@@ -8,7 +8,8 @@ return {
     config = function() -- Use config instead of opts
         require('barbar').setup {
             -- Your barbar.nvim options here
-            semantic_letters = true,
+            semantic_letters = false,
+            letters = 'asdfjkl;ghnmxcvbziowerutyqpASDFJKLGHNMXCVBZIOWERUTYQP',
             -- Example: to enable jump to buffer with <leader>b
             jump_to_buffer = { key = 'b' },
         }

@@ -4,15 +4,20 @@ return {
   build = "make",
   opts = {
     -- add opts here
-    provider = "azure",
-    azure = {
-      endpoint = "https://llmexperiments.openai.azure.com",
-      deployment = "gpt-4.1",
-      disable_tools = true,
-      temperature = 0.1,
-      timeout = 30000,
-      api_version = "2023-05-15",
-      max_tokens = 4000,
+    default_provider = "azure",
+    providers = {
+      azure = {
+        api_key="81ced80d5682421fadfa5c80cbdf7977",
+        endpoint = "https://llmexperiments.openai.azure.com",
+        deployment = "gpt-4.1",
+        disable_tools = true,
+        api_version = "2023-05-15",
+        timeout = 30000,
+        extra_request_body = {
+          temperature = 0.1,
+          max_tokens = 4000,
+        },
+      },
     },
   },
   dependencies = {
